@@ -1,0 +1,65 @@
+# My Variables
+@contentType = application/json
+@baseurl = http://localhost:3001/api
+
+### GET Request
+GET {{baseurl}}/notes/
+Content-Type: {{contentType}
+
+### GET Request
+GET {{baseurl}}/notes/1
+Content-Type: {{contentType}
+
+### GET Request (does not exist)
+GET {{baseurl}}/notes/625158890e75b4ff2a109ab9999
+Content-Type: {{contentType}
+
+### DELET Request
+DELETE {{baseurl}}/notes/625159ce9eeb30b5707374d0
+Content-Type: application/json
+
+### DELET Request  (does not exist)
+DELETE {{baseurl}}/notes/6251a0ed1317e5dff269f8aa
+Content-Type: application/json
+
+### unknown end point
+GET {{baseurl}}/notesaa/15
+Content-Type: {{contentType}
+
+### POST Request
+POST {{baseurl}}/notes/
+Content-Type: application/json
+
+{
+    "content":"TTTTesting REST client",
+    "important":true
+}
+
+
+###
+POST {{baseurl}}/notes/ HTTP/1.1
+content-type: application/json
+
+{
+    "content":"Another REST client",
+    "important": false
+}
+
+###
+POST {{baseurl}}/notes/ HTTP/1.1
+content-type: application/json
+
+{
+    "content":"Testing POST",
+    "important": false
+}
+
+
+### PUT  Request
+PUT {{baseurl}}/notes/625158890e75b4ff2a109ab9
+Content-Type: application/json
+
+{
+    "content":"Testing PUT request 3",
+    "important":true
+}
